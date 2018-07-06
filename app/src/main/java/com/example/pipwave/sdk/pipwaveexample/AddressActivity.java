@@ -48,7 +48,7 @@ public class AddressActivity extends AppCompatActivity {
 
         Bundle bundles = getIntent().getExtras();
         if(bundles != null){
-            //HomeActivity
+            //MainActivity
             i.putExtras(bundles);
             //AddressActivity
             i.putExtra("email", email);
