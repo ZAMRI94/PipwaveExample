@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:focusableInTouchMode="true">
+
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/marron"
+            android:layout_width="92dp"
+            android:layout_height="105dp"
+            app:srcCompat="@drawable/marron" />
+
+        <TextView
+            android:id="@+id/txtView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="32dp"
+            android:layout_toEndOf="@+id/marron"
+            android:text="T-Shirt Marron"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtView1"
+            android:layout_below="@+id/txtView1"
+            android:text="RM15.00"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/quantity1"
+            android:layout_width="32dp"
+            android:layout_height="37dp"
+            android:layout_alignTop="@+id/txtView1"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/txtView1"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/plus1"
+            android:layout_width="32dp"
+            android:layout_height="37dp"
+            android:layout_alignTop="@+id/quantity1"
+            android:layout_marginStart="19dp"
+            android:layout_toEndOf="@+id/quantity1"
+            android:text="+"
+            android:onClick="marronPlus"/>
+
+        <Button
+            android:id="@+id/minus1"
+            android:layout_width="32dp"
+            android:layout_height="37dp"
+            android:layout_alignBottom="@+id/plus1"
+            android:layout_toEndOf="@+id/plus1"
+            android:text="-"
+            android:onClick="marronMinus"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/black"
+            android:layout_width="92dp"
+            android:layout_height="105dp"
+            app:srcCompat="@drawable/black" />
+
+        <TextView
+            android:id="@+id/txtView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="32dp"
+            android:layout_toEndOf="@+id/black"
+            android:text="T-Shirt Black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtView3"
+            android:layout_below="@+id/txtView3"
+            android:text="RM10.00"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/quantity2"
+            android:layout_width="32dp"
+            android:layout_height="37dp"
+            android:layout_alignTop="@+id/txtView3"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/txtView3"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/plus2"
+            android:layout_width="32dp"
+            android:layout_height="37dp"
+            android:layout_alignTop="@+id/quantity2"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@+id/quantity2"
+            android:onClick="blackPlus"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/minus2"
+            android:layout_width="32dp"
+            android:layout_height="37dp"
+            android:layout_alignBottom="@+id/plus2"
+            android:layout_toEndOf="@+id/plus2"
+            android:text="-"
+            android:onClick="blackMinus"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/txtView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marron - Subtotal: RM" />
+
+        <TextView
+            android:id="@+id/txtView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtView5"
+            android:layout_marginTop="20dp"
+            android:text="Black    - Subtotal: RM" />
+
+        <EditText
+            android:id="@+id/mTotal"
+            android:layout_width="50dp"
+            android:layout_height="37dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/bTotal"
+            android:layout_width="50dp"
+            android:layout_height="37dp"
+
+            android:layout_alignStart="@+id/mTotal"
+            android:layout_below="@+id/mTotal"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@+id/total"
+            android:text="total: RM" />
+
+        <EditText
+            android:id="@+id/total"
+            android:layout_width="50dp"
+            android:layout_height="37dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Checkout"
+            android:onClick="checkout"/>
+    </RelativeLayout>
+
+</LinearLayout>
