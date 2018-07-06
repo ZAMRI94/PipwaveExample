@@ -181,6 +181,10 @@ public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCa
     @Override
     public void onCheckoutSuccess() {
         Toast.makeText(this, "Payment Success", Toast.LENGTH_LONG).show();
+        Intent i  = new Intent(this, MainActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(i);
     }
 
     @Override
