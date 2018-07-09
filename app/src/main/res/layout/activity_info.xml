@@ -11,20 +11,20 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="38dp"
-        android:text="Item" />
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView9"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="33dp"
+        android:text="@string/item" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView5"
-        android:layout_marginStart="25dp"
-        android:layout_toEndOf="@+id/textView5"
-        android:text="Price" />
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignStart="@+id/button"
+        android:text="@string/price" />
 
     <TextView
         android:id="@+id/textView3"
@@ -34,7 +34,7 @@
         android:layout_alignBottom="@+id/textView2"
         android:layout_marginEnd="25dp"
         android:layout_toStartOf="@+id/textView4"
-        android:text="Quantity" />
+        android:text="@string/quantity" />
 
     <TextView
         android:id="@+id/textView4"
@@ -44,25 +44,26 @@
         android:layout_alignBottom="@+id/textView3"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="55dp"
-        android:text="Total" />
+        android:text="@string/total" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView"
+        android:layout_alignStart="@+id/textView6"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="22dp"
-        android:text="T-Shirt Marron" />
+        android:layout_marginTop="25dp"
+        android:text="@string/t_shirt_marron" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView5"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView5"
-        android:layout_marginTop="19dp"
-        android:text="T-Shirt Black" />
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/t_shirt_black" />
 
     <TextView
         android:id="@+id/textView7"
@@ -71,7 +72,7 @@
         android:layout_alignBaseline="@+id/textView5"
         android:layout_alignBottom="@+id/textView5"
         android:layout_alignStart="@+id/textView2"
-        android:text="15.00" />
+        android:text="@string/_15_00" />
 
     <TextView
         android:id="@+id/textView8"
@@ -80,7 +81,7 @@
         android:layout_alignBaseline="@+id/textView6"
         android:layout_alignBottom="@+id/textView6"
         android:layout_alignStart="@+id/textView7"
-        android:text="10.00" />
+        android:text="@string/_10_00" />
 
     <TextView
         android:id="@+id/txtQty1"
@@ -89,7 +90,7 @@
         android:layout_alignBaseline="@+id/textView7"
         android:layout_alignBottom="@+id/textView7"
         android:layout_toEndOf="@+id/button"
-        android:text="0" />
+        android:text="@string/_0" />
 
     <TextView
         android:id="@+id/txtQty2"
@@ -98,7 +99,7 @@
         android:layout_alignBaseline="@+id/textView8"
         android:layout_alignBottom="@+id/textView8"
         android:layout_alignStart="@+id/txtQty1"
-        android:text="0" />
+        android:text="@string/_0" />
 
     <TextView
         android:id="@+id/txtMarron"
@@ -107,7 +108,7 @@
         android:layout_alignBaseline="@+id/txtQty1"
         android:layout_alignBottom="@+id/txtQty1"
         android:layout_alignStart="@+id/textView4"
-        android:text="0.00" />
+        android:text="@string/_0_00" />
 
     <TextView
         android:id="@+id/txtBlack"
@@ -116,16 +117,15 @@
         android:layout_alignBaseline="@+id/txtQty2"
         android:layout_alignBottom="@+id/txtQty2"
         android:layout_alignStart="@+id/txtMarron"
-        android:text="0.00" />
+        android:text="@string/_0_00" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView8"
-        android:layout_marginTop="60dp"
+        android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/textView2"
-        android:text="Subtotal : RM"
+        android:text="@string/subtotal_rm"
         android:textAlignment="viewEnd" />
 
     <TextView
@@ -133,8 +133,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/textView13"
-        android:layout_centerVertical="true"
-        android:text="Shipping Fee : RM"
+        android:layout_below="@+id/textView13"
+        android:layout_marginTop="14dp"
+        android:text="@string/shipping_fee_rm"
         android:textAlignment="viewEnd" />
 
     <TextView
@@ -144,7 +145,7 @@
         android:layout_alignEnd="@+id/textView14"
         android:layout_below="@+id/textView14"
         android:layout_marginTop="17dp"
-        android:text="Total : RM"
+        android:text="@string/total_rm"
         android:textAlignment="viewEnd" />
 
     <TextView
@@ -154,7 +155,7 @@
         android:layout_alignBaseline="@+id/textView13"
         android:layout_alignBottom="@+id/textView13"
         android:layout_alignStart="@+id/txtBlack"
-        android:text="0.00" />
+        android:text="@string/_0_00" />
 
     <TextView
         android:id="@+id/txtShipping"
@@ -163,7 +164,7 @@
         android:layout_alignBaseline="@+id/textView14"
         android:layout_alignBottom="@+id/textView14"
         android:layout_alignStart="@+id/txtSubtotal"
-        android:text="0.00" />
+        android:text="@string/_0_00" />
 
     <TextView
         android:id="@+id/txtTotal"
@@ -172,7 +173,7 @@
         android:layout_alignBaseline="@+id/textView15"
         android:layout_alignBottom="@+id/textView15"
         android:layout_alignStart="@+id/txtShipping"
-        android:text="0.00" />
+        android:text="@string/_0_00" />
 
     <Button
         android:id="@+id/button"
@@ -181,7 +182,17 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="46dp"
-        android:text="Purchase"
+        android:text="@string/purchase"
         android:onClick="purchase"/>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="18dp"
+        android:text="@string/your_order"
+        android:textSize="24sp" />
 
 </RelativeLayout>

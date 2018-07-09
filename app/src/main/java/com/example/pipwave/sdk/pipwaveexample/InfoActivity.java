@@ -85,7 +85,9 @@ public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCa
         txtSubtotal.setText(E);
 
         int s = Integer.parseInt(E);
-        if(s <= 100){
+        if(s == 0){
+            mShipping = 0;
+        }else if(s <= 100){
             mShipping = 10;
         }else{
             mShipping = 5;
@@ -148,7 +150,7 @@ public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCa
 
     private void itemInfo() {
 
-        List<ItemInfo>itemList = new ArrayList<ItemInfo>();
+        List<ItemInfo>itemList = new ArrayList<>();
 
         String name1 = "T-Shirt Marron";
         BigDecimal mItem1Amount = new BigDecimal("15");

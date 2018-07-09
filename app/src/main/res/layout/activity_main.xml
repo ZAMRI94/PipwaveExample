@@ -20,7 +20,8 @@
             android:id="@+id/marron"
             android:layout_width="92dp"
             android:layout_height="105dp"
-            app:srcCompat="@drawable/marron" />
+            app:srcCompat="@drawable/marron"
+            android:contentDescription="@string/t_shirt_marron" />
 
         <TextView
             android:id="@+id/txtView1"
@@ -30,7 +31,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="32dp"
             android:layout_toEndOf="@+id/marron"
-            android:text="T-Shirt Marron"
+            android:text="@string/t_shirt_marron"
             android:textSize="15sp" />
 
         <TextView
@@ -39,19 +40,20 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/txtView1"
             android:layout_below="@+id/txtView1"
-            android:text="RM15.00"
+            android:text="@string/rm15_00"
             android:textSize="15sp" />
 
         <EditText
+            android:labelFor="@id/quantity1"
             android:id="@+id/quantity1"
             android:layout_width="32dp"
             android:layout_height="37dp"
             android:layout_alignTop="@+id/txtView1"
             android:layout_marginStart="11dp"
             android:layout_toEndOf="@+id/txtView1"
-            android:text="0"
+            android:text="@string/_0"
             android:textAlignment="center"
-            android:textSize="15sp" />
+            android:textSize="15sp" android:inputType="number" />
 
         <Button
             android:id="@+id/plus1"
@@ -60,7 +62,7 @@
             android:layout_alignTop="@+id/quantity1"
             android:layout_marginStart="19dp"
             android:layout_toEndOf="@+id/quantity1"
-            android:text="+"
+            android:text="@string/pluz"
             android:onClick="marronPlus"/>
 
         <Button
@@ -69,7 +71,7 @@
             android:layout_height="37dp"
             android:layout_alignBottom="@+id/plus1"
             android:layout_toEndOf="@+id/plus1"
-            android:text="-"
+            android:text="@string/minus"
             android:onClick="marronMinus"/>
 
     </RelativeLayout>
@@ -84,7 +86,8 @@
             android:id="@+id/black"
             android:layout_width="92dp"
             android:layout_height="105dp"
-            app:srcCompat="@drawable/black" />
+            app:srcCompat="@drawable/black"
+            android:contentDescription="@string/t_shirt_black" />
 
         <TextView
             android:id="@+id/txtView3"
@@ -94,7 +97,7 @@
             android:layout_marginStart="18dp"
             android:layout_marginTop="32dp"
             android:layout_toEndOf="@+id/black"
-            android:text="T-Shirt Black"
+            android:text="@string/t_shirt_black"
             android:textSize="15sp" />
 
         <TextView
@@ -103,19 +106,20 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/txtView3"
             android:layout_below="@+id/txtView3"
-            android:text="RM10.00"
+            android:text="@string/rm10_00"
             android:textSize="15sp" />
 
         <EditText
+            android:labelFor="@id/quantity2"
             android:id="@+id/quantity2"
             android:layout_width="32dp"
             android:layout_height="37dp"
             android:layout_alignTop="@+id/txtView3"
             android:layout_marginStart="11dp"
             android:layout_toEndOf="@+id/txtView3"
-            android:text="0"
+            android:text="@string/_0"
             android:textAlignment="center"
-            android:textSize="15sp" />
+            android:textSize="15sp" android:inputType="number" />
 
         <Button
             android:id="@+id/plus2"
@@ -125,7 +129,7 @@
             android:layout_marginStart="28dp"
             android:layout_toEndOf="@+id/quantity2"
             android:onClick="blackPlus"
-            android:text="+" />
+            android:text="@string/pluz" />
 
         <Button
             android:id="@+id/minus2"
@@ -133,7 +137,7 @@
             android:layout_height="37dp"
             android:layout_alignBottom="@+id/plus2"
             android:layout_toEndOf="@+id/plus2"
-            android:text="-"
+            android:text="@string/minus"
             android:onClick="blackMinus"/>
 
     </RelativeLayout>
@@ -148,37 +152,41 @@
             android:id="@+id/txtView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Marron - Subtotal: RM" />
+            android:text="@string/marron_subtotal_rm" />
 
         <TextView
             android:id="@+id/txtView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtView5"
-            android:layout_marginTop="20dp"
-            android:text="Black    - Subtotal: RM" />
+            android:layout_alignEnd="@+id/txtView5"
+            android:layout_below="@+id/mTotal"
+            android:text="@string/black_subtotal_rm" />
 
         <EditText
+            android:labelFor="@id/mTotal"
             android:id="@+id/mTotal"
             android:layout_width="50dp"
             android:layout_height="37dp"
 
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="0"
+            android:text="@string/_0"
             android:textAlignment="center"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:inputType="number" />
 
         <EditText
+            android:labelFor="@id/bTotal"
             android:id="@+id/bTotal"
             android:layout_width="50dp"
             android:layout_height="37dp"
 
             android:layout_alignStart="@+id/mTotal"
             android:layout_below="@+id/mTotal"
-            android:text="0"
+            android:text="@string/_0"
             android:textAlignment="center"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:inputType="number" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -191,19 +199,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="21dp"
             android:layout_toStartOf="@+id/total"
-            android:text="total: RM" />
+            android:text="@string/total_rm1" />
 
         <EditText
+            android:labelFor="@id/total"
             android:id="@+id/total"
             android:layout_width="50dp"
             android:layout_height="37dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="0"
+            android:text="@string/_0"
             android:textAlignment="center"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:inputType="number" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -218,7 +228,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Checkout"
+            android:text="@string/purchase"
             android:onClick="checkout"/>
     </RelativeLayout>
 

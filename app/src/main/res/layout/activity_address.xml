@@ -25,7 +25,7 @@
                 android:layout_height="36.5dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:text="Name: "
+                android:text="@string/name"
                 android:textAlignment="viewEnd"
                 android:textSize="15sp" />
 
@@ -35,7 +35,7 @@
                 android:layout_height="36.5dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/txtName"
-                android:text="Address: "
+                android:text="@string/address"
                 android:textAlignment="viewEnd"
                 android:textSize="15sp" />
 
@@ -46,7 +46,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/txtAddress1"
                 android:layout_marginTop="38dp"
-                android:text="City: "
+                android:text="@string/city"
                 android:textAlignment="viewEnd"
                 android:textSize="15sp" />
 
@@ -56,7 +56,7 @@
                 android:layout_height="36.5dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/txtCity"
-                android:text="State: "
+                android:text="@string/state"
                 android:textAlignment="viewEnd"
                 android:textSize="15sp" />
 
@@ -67,7 +67,7 @@
                 android:layout_height="36.5dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/txtState"
-                android:text="Zip: "
+                android:text="@string/zip"
                 android:textAlignment="viewEnd"
                 android:textSize="15sp" />
 
@@ -78,7 +78,7 @@
                 android:layout_height="36.5dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/txtZip"
-                android:text="Country: "
+                android:text="@string/country"
                 android:textAlignment="viewEnd"
                 android:textSize="15sp" />
 
@@ -89,7 +89,7 @@
                 android:layout_height="36.5dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/txtCountry"
-                android:text="Contact No: "
+                android:text="@string/contact_no"
                 android:textAlignment="viewEnd"
                 android:textSize="15sp" />
 
@@ -100,7 +100,7 @@
                 android:layout_height="36.5dp"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/txtContact"
-                android:text="Email: "
+                android:text="@string/email"
                 android:textAlignment="viewEnd"
                 android:textSize="15sp" />
         </RelativeLayout>
@@ -112,74 +112,85 @@
             android:orientation="vertical">
 
             <EditText
+                android:labelFor="@id/editName"
                 android:id="@+id/editName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Zamri"
-                android:textSize="12sp" />
+                android:text="@string/zamri"
+                android:textSize="12sp"
+                android:inputType="text" />
 
             <EditText
+                android:labelFor="@id/editAddress1"
                 android:id="@+id/editAddress1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Blok A-12-12 Pangsapuri Mawar"
-                android:textSize="12sp" />
+                android:text="@string/blok_a_12_12_pangsapuri_mawar"
+                android:textSize="12sp"
+                android:inputType="text" />
 
             <EditText
+                android:labelFor="@id/editAddress2"
                 android:id="@+id/editAddress2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bandar Baru Sentul"
-                android:textSize="12sp" />
+                android:text="@string/bandar_baru_sentul"
+                android:textSize="12sp"
+                android:inputType="text" />
 
             <EditText
+                android:labelFor="@id/editCity"
                 android:id="@+id/editCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txtContact"
-                android:layout_alignBottom="@+id/txtContact"
-                android:layout_alignParentStart="true"
-                android:text="Kuala Lumpur"
-                android:textSize="12sp" />
+                android:text="@string/kuala_lumpur"
+                android:textSize="12sp"
+                android:inputType="text" />
 
             <EditText
+                android:labelFor="@id/editState"
                 android:id="@+id/editState"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/txtCity"
-                android:text="W.P Kuala Lumpur"
-                android:textSize="12sp" />
+                android:text="@string/w_p_kuala_lumpur"
+                android:textSize="12sp"
+                android:inputType="text" />
 
             <EditText
+                android:labelFor="@id/editZip"
                 android:id="@+id/editZip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="51000"
-                android:textSize="12sp" />
+                android:text="@string/_51000"
+                android:textSize="12sp"
+                android:inputType="text" />
 
             <EditText
+                android:labelFor="@id/editCountry"
                 android:id="@+id/editCountry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Malaysia"
-                android:textSize="12sp" />
+                android:text="@string/malaysia"
+                android:textSize="12sp"
+                android:inputType="text" />
 
             <EditText
+                android:labelFor="@id/editContact"
                 android:id="@+id/editContact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0192901157"
-                android:textSize="12sp" />
+                android:text="@string/_0192901157"
+                android:textSize="12sp"
+                android:inputType="text" />
 
             <EditText
+                android:labelFor="@id/editEmail"
                 android:id="@+id/editEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:text="zamriyusof1994@gmail.com"
-                android:textSize="12sp" />
+                android:text="@string/zamriyusof1994_gmail_com"
+                android:textSize="12sp"
+                android:inputType="textEmailAddress" />
 
 
         </LinearLayout>
@@ -198,7 +209,7 @@
             android:id="@+id/btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Continue"
+            android:text="@string/continuee"
             android:onClick="cont"/>
     </LinearLayout>
 
