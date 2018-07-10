@@ -1,1 +1,1 @@
-include ':app', ':pipwavesdklibrary-debug'
+include ':app', ':pipwavesdklibrary'

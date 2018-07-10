@@ -43,7 +43,7 @@ public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCa
     String email = null;
     AddressInfo address = null;
     BuyerInfo buyerInfo = null;
-    ApiOverride override = null;
+    ApiOverride apiOverride = null;
 
     int mShipping, mTotal = 0;
 
@@ -115,28 +115,21 @@ public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCa
 
         String currency_code = "MYR";
 
-        String mSignature = "action:"+ ACTION + "amount:" + amount + "api_key:" + API_STAGING_KEY + "api_secret:" + API_STAGING_SECRET + "currency_code:" + currency_code + "timestamp:" + timestamp + "txn_id:" + txn_id;
-
-        String signature = null;
-        try{
-            signature = Signature.SHA1(mSignature);
-        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-
         BigDecimal mShip = new BigDecimal(mShipping);
         String ship = mShip.toString();
 
-        Pipwave pipwave = new Pipwave(signature, ACTION, timestamp, API_STAGING_KEY,txn_id,amount,currency_code,buyerInfo, override);
+        Pipwave pipwave = new Pipwave(ACTION, timestamp,API_STAGING_KEY,API_STAGING_SECRET,txn_id,amount,currency_code,buyerInfo);
         pipwave.setShippingInfo(address);
+        pipwave.setBillingInfo(address);
         pipwave.setItemList(itemList2);
         pipwave.setShippingAmount(ship);
+        pipwave.setApiOverride(apiOverride);
         mPipwaveCheckout.execute(this, pipwave);
     }
 
     private void apiOverride() {
 
-        override = new ApiOverride(CANCEL_URL_PIPWAVE, SUCCESS_URL_PIPWAVE, FAILURE_URL_PIPWAVE);
+        apiOverride = new ApiOverride(CANCEL_URL_PIPWAVE, SUCCESS_URL_PIPWAVE, FAILURE_URL_PIPWAVE);
     }
 
     private void buyer() {
