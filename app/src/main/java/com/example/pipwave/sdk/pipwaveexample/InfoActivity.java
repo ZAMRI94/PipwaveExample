@@ -29,6 +29,8 @@ import static com.example.pipwave.sdk.pipwaveexample.Config.API_STAGING_SECRET;
 import static com.example.pipwave.sdk.pipwaveexample.Config.CANCEL_URL_PIPWAVE;
 import static com.example.pipwave.sdk.pipwaveexample.Config.FAILURE_URL_PIPWAVE;
 import static com.example.pipwave.sdk.pipwaveexample.Config.SUCCESS_URL_PIPWAVE;
+import static com.example.pipwave.sdk.pipwaveexample.HeaderStyles.HEADERS;
+import static com.example.pipwave.sdk.pipwaveexample.HeaderStyles.STYLES;
 import static com.pipwave.sdk.library.pipwavesdklibrary.PipwaveConfig.ACTION;
 
 
@@ -103,10 +105,6 @@ public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCa
         itemInfo();
         buyer();
 
-        //InitiatePayment
-        long time = System.currentTimeMillis()/1000L;
-        String timestamp = Long.toString(time);
-
         BigDecimal mAmount = new BigDecimal(mTotal);
         String amount = mAmount.toString();
 
@@ -118,12 +116,14 @@ public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCa
         BigDecimal mShip = new BigDecimal(mShipping);
         String ship = mShip.toString();
 
-        Pipwave pipwave = new Pipwave(ACTION, timestamp,API_STAGING_KEY,API_STAGING_SECRET,txn_id,amount,currency_code,buyerInfo);
+        Pipwave pipwave = new Pipwave(API_STAGING_KEY,API_STAGING_SECRET,txn_id,amount,currency_code,buyerInfo);
         pipwave.setShippingInfo(address);
         pipwave.setBillingInfo(address);
         pipwave.setItemList(itemList2);
         pipwave.setShippingAmount(ship);
         pipwave.setApiOverride(apiOverride);
+        pipwave.setStyles(STYLES);
+        pipwave.setHeaders(HEADERS);
         mPipwaveCheckout.execute(this, pipwave);
     }
 
