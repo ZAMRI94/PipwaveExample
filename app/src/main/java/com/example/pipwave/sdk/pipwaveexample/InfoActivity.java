@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.pipwave.sdk.library.pipwavesdklibrary.PipwaveConfig;
 import com.pipwave.sdk.library.pipwavesdklibrary.common.utils.RandomString;
-import com.pipwave.sdk.library.pipwavesdklibrary.common.utils.Signature;
 import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.Pipwave;
 import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.PipwaveCheckout;
 import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.PipwaveCheckoutCallback;
@@ -31,7 +31,6 @@ import static com.example.pipwave.sdk.pipwaveexample.Config.FAILURE_URL_PIPWAVE;
 import static com.example.pipwave.sdk.pipwaveexample.Config.SUCCESS_URL_PIPWAVE;
 import static com.example.pipwave.sdk.pipwaveexample.HeaderStyles.HEADERS;
 import static com.example.pipwave.sdk.pipwaveexample.HeaderStyles.STYLES;
-import static com.pipwave.sdk.library.pipwavesdklibrary.PipwaveConfig.ACTION;
 
 
 public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCallback {
