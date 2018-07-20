@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
-import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.model.AddressInfo;
+import com.pipwave.sdk.android.pipwave.model.AddressInfo;
 
 
 public class AddressActivity extends AppCompatActivity {

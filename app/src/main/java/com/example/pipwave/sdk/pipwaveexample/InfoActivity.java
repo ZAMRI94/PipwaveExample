@@ -8,19 +8,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.pipwave.sdk.library.pipwavesdklibrary.PipwaveConfig;
-import com.pipwave.sdk.library.pipwavesdklibrary.common.utils.RandomString;
-import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.Pipwave;
-import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.PipwaveCheckout;
-import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.PipwaveCheckoutCallback;
-import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.model.AddressInfo;
-import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.model.ApiOverride;
-import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.model.BuyerInfo;
-import com.pipwave.sdk.library.pipwavesdklibrary.pipwave.model.ItemInfo;
+import com.pipwave.sdk.android.PipwaveConfig;
+import com.pipwave.sdk.android.common.utils.RandomString;
+import com.pipwave.sdk.android.pipwave.Pipwave;
+import com.pipwave.sdk.android.pipwave.PipwaveCheckout;
+import com.pipwave.sdk.android.pipwave.PipwaveCheckoutCallback;
+import com.pipwave.sdk.android.pipwave.model.AddressInfo;
+import com.pipwave.sdk.android.pipwave.model.ApiOverride;
+import com.pipwave.sdk.android.pipwave.model.BuyerInfo;
+import com.pipwave.sdk.android.pipwave.model.ItemInfo;
 
-import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
