@@ -113,7 +113,7 @@ public class InfoActivity extends AppCompatActivity implements PipwaveCheckoutCa
         BigDecimal mShip = new BigDecimal(mShipping);
         String ship = mShip.toString();
 
-        Pipwave pipwave = new Pipwave(API_STAGING_KEY,API_STAGING_SECRET,txn_id,amount,currency_code,buyerInfo);
+        Pipwave pipwave = new Pipwave(API_STAGING_KEY, API_STAGING_SECRET, txn_id, amount, currency_code, buyerInfo);
         pipwave.setShippingInfo(address);
         pipwave.setBillingInfo(address);
         pipwave.setItemList(itemList2);
